@@ -25,6 +25,10 @@ function CharacterDetail() {
                 <>
                     <img src={character.image ?? ''} alt={character.name ?? ''} />
                     <p>Name: {character.name}</p>
+                    <p>Status: {character.status}</p>
+                    <p>Species: {character.species}</p>
+                    <p>Gender: {character.gender}</p>
+                    <p>Location: {character.location?.name}</p>
                 </>
             )}
         </div>

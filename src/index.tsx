@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import CharacterDetail from './CharacterDetail';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,9 +17,16 @@ const client = new ApolloClient({
 });
 
 root.render(
-  <ApolloProvider client={client}>
-    <App />
+  <React.StrictMode>
+    <ApolloProvider client={client}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/character/:id" element={<CharacterDetail />} />
+        </Routes>
+      </Router>
     </ApolloProvider>,
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
