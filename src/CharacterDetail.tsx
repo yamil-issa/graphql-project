@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetCharacterQuery } from './generated/graphql';
+import './style.css';
+
 
 function CharacterDetail() {
     const { id } = useParams<{ id: string }>();
@@ -20,15 +22,15 @@ function CharacterDetail() {
 
     return (
         <div>
-            <h2>Character Details</h2>
+            <h1>Character Details</h1>
             {character && (
                 <>
                     <img src={character.image ?? ''} alt={character.name ?? ''} />
-                    <p>Name: {character.name}</p>
-                    <p>Status: {character.status}</p>
-                    <p>Species: {character.species}</p>
-                    <p>Gender: {character.gender}</p>
-                    <p>Location: {character.location?.name}</p>
+                    <p><strong>Name:</strong> {character.name}</p>
+                    <p><strong>Status:</strong>{character.status}</p>
+                    <p><strong>Species: </strong> {character.species}</p>
+                    <p><strong>Gender: </strong> {character.gender}</p>
+                    <p><strong>Location:</strong> {character.location?.name}</p>
                 </>
             )}
         </div>
