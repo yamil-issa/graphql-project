@@ -28,6 +28,43 @@
   color: #61dafb;
 }
 
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem;
+  padding: 0;
+}
+li {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
