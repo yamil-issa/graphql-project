@@ -28,16 +28,19 @@
   color: #61dafb;
 }
 
+.character_card {
+  display: flex;
+  flex-direction: column;
+  background-color: #2f5175;
+  border-radius: 10px;
+}
+
 ul {
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
   gap: 1rem;
   padding: 0;
-}
-li {
-  display: flex;
-  flex-direction: column;
 }
 
 .pagination {
@@ -48,6 +51,7 @@ li {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: #000;
 
 }
 

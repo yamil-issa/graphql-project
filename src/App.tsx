@@ -33,8 +33,10 @@ function App() {
                   <li key={character?.id ?? index}>
                   {character && (
                     <Link to={`/character/${character.id}`}>
-                      <img src={character.image ?? ''} alt={character.name ?? ''} />
-                      <strong>Name:</strong> {character.name}, <strong>Status:</strong> {character.status}
+                      <div className="character_card">
+                        <img src={character.image ?? ''} alt={character.name ?? ''} />
+                        <strong>Name:</strong> {character.name}, <strong>Status:</strong> {character.status}
+                      </div>
                     </Link>
                   )}
                   </li>
